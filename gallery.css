@@ -1,0 +1,201 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana;
+    background-color: white;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 6%;
+    background: beige; 
+    /* background-color: #333; */
+    color: black;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+    margin-bottom: 250px;
+
+}
+#main-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 280px;
+}
+#main-head h3{
+    font-weight: 700;
+    font-size: 25px;
+}
+header #navigation{
+    display: flex;
+}
+nav ul li a{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(28, 28, 134);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav ul li a:hover{
+    border-bottom: 5px solid rgb(28, 28, 134);
+    font-size: 23px;
+
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+nav ul li{
+    list-style-type: none;
+   
+}
+
+/* --------------gallery------------- */
+#gallery{
+    margin-top: 100px;
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+#gallery .title  h3{
+    color: rgb(28, 28, 134);
+    font-size: 50px;
+}
+.heading h2{
+    color: rgb(28, 28, 134);
+}
+.title-h3{
+    font-size: 50px;
+}
+.title p{
+    font-style: italic;
+    font-size: 23px;
+    margin-bottom: 100px;
+}
+#gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* ---art card styling----- */
+.art-card{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.art-card:hover{
+    transform: scale(1.05);
+}
+/* ----artwork image---- */
+.art-card img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+/* ---artwork info---- */
+.art-info{
+    padding: 15px;
+    text-align: left;
+}
+.art-info h3{
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+.art-info p{
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+.art-description{
+    font-style: italic;
+    color: #777;
+}
+
+/* -------------------------------footer-------------------------------------- */
+footer{
+    color: white;
+    background-color: black;
+    margin-top: 200px;
+}
+#foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    padding-top: 20px;
+    width: 100%;
+    height: 350px;
+}
+#about-foot{
+    width: 250px;
+}
+#contact-foot img{
+     height: 20px;
+}
+#contact-foot ul li{
+    list-style-type: none;
+    
+}
+#contact-foot ul li a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+#link-foot ul li{
+    list-style-type: none;
+}
+#link-foot ul li a{
+    text-decoration: none;
+    color: white;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#social-foot ul li{
+     list-style-type: none;
+}
+#social-foot ul li a{
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+.social-icon img{
+    width: 20px;
+    height: 20px;
+}
+.social-icon{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 5px;
+}
+
+#border hr{
+    color: white;
+    height: 2px;
+    width: 80%;
+    background-color: white; 
+    text-align: center;
+}
+footer .copyright p{
+    text-align: center;
+    padding: 20px;
+}
