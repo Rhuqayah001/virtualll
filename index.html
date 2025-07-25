@@ -3,17 +3,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIRTUAL ART GALLERY</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/ruqahart.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
+     <header>
         <div id="main-head">
             <div>
                 <img src="images/ruqahart.png" alt="" width="250px">
             </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+             ☰
+            </button>
+  
             <div id="navigation">
                 <nav>
-                    <ul>
+                    <ul class="nav-links">
                       <li><a href="index.html">Home</a></li>
                       <li><a href="about.html">About</a></li>
                       <li><a href="gallery.html">Gallery</a></li>
@@ -25,7 +31,18 @@
                 
             
         </div>
-    </header>
+    </header> 
+    <!-- <nav class="navbar">
+        <div class="logo">RuqahArtShows</div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="submit-form.html">Submit Art</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+    </nav> -->
 
     <section id="video-section">
         <div id="video-container">
@@ -46,11 +63,11 @@
             <div class="about-image">
                 <img src="images/about ruqah.png" alt="" width="500px">
             </div>
-        <div id="about-text">
-            <h2>About us</h2>
-            <p>RuqahArtShow is a team of passionate art enthusiasts, technologists, and innovators dedicated to revolutionizing the way we experience and interact with virtual art. Our platform is designed to showcase the most exciting and innovative digital art from around the world, while providing a unique and immersive experience for our audience.</p>
-            <button id="about-btn"><a href="gallery.html">Explore</a></button>
-        </div>
+            <div id="about-text">
+                <h2>About us</h2>
+                <p>RuqahArtShow is a team of passionate art enthusiasts, technologists, and innovators dedicated to revolutionizing the way we experience and interact with virtual art. Our platform is designed to showcase the most exciting and innovative digital art from around the world, while providing a unique and immersive experience for our audience.</p>
+                <button id="about-btn"><a href="gallery.html">Explore</a></button>
+            </div>
        </div>
     </section>
 
@@ -153,8 +170,8 @@
            </div>
 
            <div class="contact-us">
-              <h2>Get in Touch</h2>
-              <form id="contact-form">
+              <h2 >Get in Touch</h2>
+              <form id="contact-form" action="https://formspree.io/f/mldldekz" method="post">
 
                  <input type="text" name="name" id="name" placeholder="Your name" required><br>
 
@@ -162,8 +179,37 @@
                  
                  <textarea  id="message" rows="10" cols="20" required placeholder="Your message"></textarea><br>
 
+                 <input type="hidden" name="_redirect" value="thank-you.html">
+
                  <button type="submit">Submit</button>
               </form>
+            
+              <div id="statusMessage"></div>
+
+                <script>
+                    const form = document.getElementById("contactForm");
+                    const statusMessage = document.getElementById("statusMessage");
+
+                    form.addEventListener("submit", async (e) => {
+                        e.preventDefault();
+                        const data = new FormData(form);
+                        const response = await fetch(form.action, {
+                        method: "POST",
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                        });
+
+                        if (response.ok) {
+                        statusMessage.innerHTML = "<p>Thanks! Your message has been sent.</p>";
+                        form.reset();
+                        } else {
+                        statusMessage.innerHTML = "<p>Oops! There was a problem.</p>";
+                        }
+                    });
+                </script>
+
            </div>
    </section>
 <!-- ---------------------------------    footer    --------------------------------------- -->
@@ -258,5 +304,16 @@
         </div>
        
     </footer>
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const navigation = document.getElementById("navigation");
+
+        toggleBtn.addEventListener("click", () => {
+            navigation.classList.toggle("open");
+        });
+    </script>
+
+
 </body>
 </html>

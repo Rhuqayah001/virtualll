@@ -1,0 +1,265 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana;
+    background-color: white;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 6%;
+    background: beige;
+    color: rgb(28, 28, 134);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+
+}
+#main-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 280px;
+}
+#main-head h3{
+    font-weight: 700;
+    font-size: 25px;
+}
+header #navigation{
+    display: flex;
+}
+nav ul li a{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(28, 28, 134);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav ul li a:hover{
+    border-bottom: 5px solid rgb(28, 28, 134);
+    font-size: 23px;
+
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+nav ul li{
+    list-style-type: none;
+}
+
+/* ---------------submit form ---------------- */
+
+#form-submit{
+    border: 2px solid rgb(28, 28, 134);
+    border-radius: 40px;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    height: 700px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+
+}
+#form-submit h2{
+    font-weight: 800;
+    font-size: 40px;
+    color: rgb(28, 28, 134);
+}
+#form-submit #art-title,
+#form-submit #artist-name,
+#form-submit #description{
+    width: 100%;
+    padding: 1.5em;
+    font-size: 18px;
+    color: rgb(28, 28, 134);
+    background: rgba(241, 241, 241);
+    border-radius: .8rem;
+    margin: 1rem 0;
+    resize: none;
+    height: 60px;
+    border: 1px solid rgb(28, 28, 134);
+    margin-bottom: 30px;
+}
+.sub{
+    background-color: #FFD700;
+    color: rgb(28, 28, 134);
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-size: 16px;
+
+    
+}
+ input[type="file"] {
+    display: none;
+}
+label {
+    display: inline-block;
+    background-color: #FFD700; 
+    color: rgb(28, 28, 134);
+    padding: 0.8em;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1.5em;
+    width: 90%;
+}
+
+#form-submit #art-image{
+    padding: 10px;
+    font-size: 16px;
+    
+}
+
+#form-submit button{
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0px 20px; 
+    font-weight: bolder;
+    color: rgb(28, 28, 134);
+    background-color: #FFD700;
+    border: 2px solid #032B44;
+    border-radius: 15px;
+}
+#form-submit button:hover{
+    color: #FFD700;
+    background-color: rgb(28, 28, 134);
+}
+#form-submit button a:hover{
+    color: #FFD700;
+}
+button a{
+    text-decoration: none;
+    color:rgb(28, 28, 134);
+}
+
+
+
+
+/* -------------------------------footer-------------------------------------- */
+footer{
+    color: white;
+    background-color: black;
+    margin-top: 200px;
+}
+#foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    padding-top: 20px;
+    width: 100%;
+    height: 350px;
+}
+#about-foot{
+    width: 250px;
+}
+#contact-foot img{
+     height: 20px;
+}
+#contact-foot ul li{
+    list-style-type: none;
+    
+}
+#contact-foot ul li a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+#link-foot ul li{
+    list-style-type: none;
+}
+#link-foot ul li a{
+    text-decoration: none;
+    color: white;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#social-foot ul li{
+     list-style-type: none;
+}
+#social-foot ul li a{
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+.social-icon img{
+    width: 20px;
+    height: 20px;
+}
+.social-icon{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 5px;
+}
+
+#border hr{
+    color: white;
+    height: 2px;
+    width: 80%;
+    background-color: white; 
+    text-align: center;
+}
+footer .copyright p{
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #foot {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    height: auto;
+    padding: 30px 10px;
+    gap: 30px;
+    margin-left: 50px;
+  }
+
+  #about-foot,
+  #contact-foot,
+  #link-foot,
+  #social-foot {
+    width: 100%;
+  }
+
+  #contact-foot ul,
+  #link-foot ul,
+  #social-foot ul {
+    padding: 0;
+  }
+
+  #border hr {
+    width: 90%;
+  }
+
+  footer .copyright p {
+    font-size: 14px;
+  }
+}

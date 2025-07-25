@@ -34,7 +34,7 @@
        <h2>Contact Us</h2>
        <p>Have questions or want to collaborate? Send us a message!</p>
 
-       <form id="contact-form">
+       <form id="contact-form" action="https://formspree.io/f/mldldekz" method="post">
         
         <input type="text" id="name" placeholder="Your Name" required>
         <br>
@@ -44,6 +44,10 @@
         
         <textarea  id="message" rows="10" cols="20" placeholder="Your Message"  required></textarea>
         <br>
+
+        <input type="hidden" name="_redirect" value="thank-you.html">
+        <br>
+        
         <button type="submit"> <a href="thanks-contact.html">Send Message</a></button>
        </form>
 

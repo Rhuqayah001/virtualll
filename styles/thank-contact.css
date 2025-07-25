@@ -59,38 +59,34 @@ nav ul li{
    
 }
 
-
-
-/* ---------body------- */
-#thank-you{
-    margin: 100px auto;
-    text-align: center;
+/* --------body----------- */
+#thanks-contact{
     padding: 30px;
+    align-items:center;
+    margin: 100px auto;
     border-radius: 10px;
     background-color: white;
 }
-#thank-you h1{
-    font-size: 2em;
-    margin-bottom: 25px;
+.thank-you h1{
+    font-size: 50px;
+    color: rgb(28, 28, 134);
 }
-#thank-you p{
+.thank-you p{
     font-size: 1.1em;
     color: #666;
 }
 .btn{
-    display: inline-block;
+    background:#FFD700;
     padding: 10px 20px;
-    margin: 10px;
-    text-decoration: none;
-    color: rgb(28, 28, 134);
-    background: #FFD700;
     border-radius: 10px; 
     transition: 0.3s ease-in-out; 
     font-weight: 600;
+    color: rgb(28, 28, 134);
+    text-decoration: none;
 }
 .btn:hover{
-    background:rgb(28, 28, 134);
     color:#FFD700;
+    background: rgb(28, 28, 134);
 }
 
 
@@ -166,4 +162,37 @@ footer{
 footer .copyright p{
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #foot {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    height: auto;
+    padding: 30px 10px;
+    gap: 30px;
+    margin-left: 20px;
+  }
+
+  #about-foot,
+  #contact-foot,
+  #link-foot,
+  #social-foot {
+    width: 100%;
+  }
+
+  #contact-foot ul,
+  #link-foot ul,
+  #social-foot ul {
+    padding: 0;
+  }
+
+  #border hr {
+    width: 90%;
+  }
+
+  footer .copyright p {
+    font-size: 14px;
+  }
 }

@@ -21,6 +21,10 @@ header{
     margin-bottom: 250px;
 
 }
+/* Logo */
+#main-head img {
+  max-width: 200px;
+}
 #main-head{
     display: flex;
     flex-direction: row;
@@ -59,6 +63,62 @@ nav ul li{
    
 }
 
+/* Hamburger menu button */
+.menu-toggle {
+  background-color: beige;
+  border: none;
+  color: rgb(28, 28, 134);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* ✅ Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #navigation {
+    display: none;
+    width: 100%;
+    background-color: beige;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+   .nav-links{
+        display: none;
+        flex-direction: column;
+        background: beige;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem;
+    }
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+
+  #navigation.open {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    text-align: left;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+}
+
 
 /* ---------about-------- */
 #about{
@@ -83,6 +143,20 @@ nav ul li{
     font-size: 18px;
 }
 
+/* ✅ Mobile styles */
+@media (max-width: 768px){
+    .about-us h2{
+        font-size: 20px;
+    }
+    .about-us h4{
+        font-size: 15px;
+    }
+    .about-us p{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
 /* ----who we are---- */
 #who-we-are{
     width: 70%;
@@ -103,6 +177,21 @@ nav ul li{
     font-size: 18px;
     font-style: italic;
     line-height: 1.5;
+}
+
+/* ✅ Mobile styles */
+@media (max-width: 768px){
+    #who-we-are{
+        width: 60%;
+        height: auto;
+    }
+    #who-we-are h2{
+        font-size: 20px;
+    }
+    #who-we-are p{
+        font-size: 14px;
+        line-height: 1.5;
+    }
 }
 
 /* ----mission---- */
@@ -139,13 +228,30 @@ nav ul li{
    font-size: 22px;
 }
 
+@media (max-width: 768px) {
+  .mission-and-vision {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .mission-and-vision h2 {
+    font-size: 24px;
+  }
+
+  .mission-and-vision p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
 
 /* -----why choose us---- */
 #why-choose{
     text-align: center;
     margin-bottom: 50px;
 }
-#why-choose h2{
+/* #why-choose h2{
     background-color: rgb(28, 28, 134);
     padding: 20px;
     width: 800px;
@@ -156,7 +262,7 @@ nav ul li{
     margin-bottom: 0px;
     text-align: center;
     height: 40px;
-}
+} */
 #why-choose ul{
     list-style: none;
     padding: 0;
@@ -169,15 +275,15 @@ nav ul li{
 dt span{
     color: rgb(28, 28, 134);
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
 }
-#why-choose ul li{
+/* #why-choose ul li{
     background-color: beige;
     width: 800px;
     margin: 0 auto;
     border-radius: 80px;
     margin-bottom: 2px;
-}
+} */
 dd{
     font-size: 18px;
     margin-top: 8px;
@@ -186,6 +292,50 @@ dd{
 span{
     font-weight: 700;
 }
+
+
+#why-choose h2 {
+    background-color: rgb(28, 28, 134);
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto 20px;
+    border-radius: 40px;
+    color: beige;
+    font-size: 20px;
+    text-align: center;
+}
+
+#why-choose ul li {
+    background-color: beige;
+    max-width: 90%;
+    margin: 0 auto 10px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+  #why-choose ul li {
+    max-width: 700px;
+  }
+  #why-choose h2 {
+    max-width: 800px;
+  }
+}
+
+dt span {
+    color: rgb(28, 28, 134);
+    font-weight: 700;
+    font-size: 22px;
+}
+
+dd {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
 
 
 /* ----team----- */
@@ -330,4 +480,37 @@ footer{
 footer .copyright p{
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #foot {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    height: auto;
+    padding: 30px 10px;
+    gap: 30px;
+    margin-left: 20px;
+  }
+
+  #about-foot,
+  #contact-foot,
+  #link-foot,
+  #social-foot {
+    width: 100%;
+  }
+
+  #contact-foot ul,
+  #link-foot ul,
+  #social-foot ul {
+    padding: 0;
+  }
+
+  #border hr {
+    width: 90%;
+  }
+
+  footer .copyright p {
+    font-size: 14px;
+  }
 }

@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIRTUAL ART GALLERY</title>
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="./styles/about.css">
 </head>
 <body>
     <header>
@@ -11,9 +11,12 @@
             <div>
                 <img src="images/ruqahart.png" alt="" width="250px">
             </div>
+            <button class="menu-toggle" id="menu-toggle">
+             ☰
+            </button>
             <div id="navigation">
                 <nav>
-                    <ul>
+                    <ul class="nav-links">
                       <li><a href="index.html">Home</a></li>
                       <li><a href="about.html">About</a></li>
                       <li><a href="gallery.html">Gallery</a></li>
@@ -288,7 +291,14 @@
         </div>
        
     </footer>
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const navigation = document.getElementById("navigation");
+
+        toggleBtn.addEventListener("click", () => {
+            navigation.classList.toggle("open");
+        });
+    </script>
 </body>
 </html>
- </body>
-</html>
+
